@@ -1,7 +1,6 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:todoappnew/moduel/todoapp/cubit/cubit.dart';
-import 'package:todoappnew/shared/CasheHelper/CasheHelper.dart';
 
 
 Widget BuildTextFormFieldDefault({
@@ -331,15 +330,3 @@ Widget BuildDefaultTextButton({
 MaterialColor primayColor=Colors.deepOrange;
 
 
-Widget SignOut(context,Widget widget)=>TextButton(
-  onPressed: (){
-    CasheHelper.ClearData(key: 'login').then((value) {
-      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>widget), (route) => false);
-    });
-
-  },
-  child: Text(
-      'Sign out'
-  ),
-);
-dynamic login_token='';

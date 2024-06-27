@@ -6,9 +6,7 @@ import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:todoappnew/moduel/todoapp/cubit/cubit.dart';
 import 'package:todoappnew/moduel/todoapp/cubit/state.dart';
 import 'package:todoappnew/moduel/todoapp/models/homescreen.dart';
-import 'package:todoappnew/shared/CasheHelper/CasheHelper.dart';
-import 'package:todoappnew/shared/Diopackage/dio.dart';
-import 'package:todoappnew/shared/Themes/themes.dart';
+
 import 'package:todoappnew/shared/blocObserver.dart';
 import 'package:todoappnew/shared/constants/constants.dart';
 
@@ -16,7 +14,6 @@ void main()async {
   Bloc.observer = MyBlocObserver();
 
 
-  DioHelper.init();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget{

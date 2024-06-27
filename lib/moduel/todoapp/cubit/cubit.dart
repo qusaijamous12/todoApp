@@ -7,7 +7,6 @@ import 'package:todoappnew/moduel/todoapp/models/archivescreen/archivescreen.dar
 import 'package:todoappnew/moduel/todoapp/models/donescreen/donescreen.dart';
 import 'package:todoappnew/moduel/todoapp/models/taskscreen/taskscreen.dart';
 
-import 'package:todoappnew/shared/CasheHelper/CasheHelper.dart';
 
 class TodoCubit extends Cubit<TodoState>{
   TodoCubit():super(InitialTodoState());
@@ -159,17 +158,7 @@ class TodoCubit extends Cubit<TodoState>{
   }
 
 
-  void ChangeThemeMode({bool ?fromshared}){
-    if(fromshared!=null)
-      isDark=fromshared;
-      else
-    isDark=!isDark;
-    CasheHelper.saveData(key: 'isDarkk', value: isDark).then((value) {
-      emit(ChangeThemeModeSuccess());
 
-    });
-
-  }
 
 
 }
